@@ -48,7 +48,24 @@
         </VerticalStackLayout>
 
         <CollectionView Grid.Row="2" ItemsSource="{Binding Profile}" VerticalOptions="Center">
-             
+
+            <CollectionView.ItemsLayout>
+                <LinearItemsLayout ItemSpacing="10" Orientation="Horizontal" />
+            </CollectionView.ItemsLayout>
+
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid ColumnDefinitions=".35*, .65*"
+                          HeightRequest="60"
+                          WidthRequest="160">
+                        <RoundRectangle Grid.ColumnSpan="2"
+                                        CornerRadius="45"
+                                        Fill="#1F252A"/>
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate> 
+                
+                
         </CollectionView>
     </Grid>
 </ContentPage>
